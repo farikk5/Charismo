@@ -1,0 +1,124 @@
+@import url(./null.css);
+@import url(./header.css);
+@import url(./footer.css);
+
+:root {
+  --title-color: #304560;
+  --subtitle-color: #728399;
+  --blue-color: #2389FF;
+}
+
+/* *======================================================  header ================================================================= */
+
+.header__top {
+  background-color: #F4F7FE;
+}
+
+.top-header__body {
+  background-color: transparent;
+}
+.header__main {
+  background-color: #fff;
+}
+
+/* *======================================================  navigation ================================================================= */
+
+.navigation {
+  padding: 74px 0;
+}
+.navigation__content {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.navigation__content > a:hover {
+	text-decoration: underline;
+}
+.navigation__content span {
+  font-weight: 700;
+}
+
+/* *======================================================  spoiler ================================================================= */
+
+.spoiler {
+	margin-bottom: 50px;
+}
+.spoiler__container {
+}
+.spoiler__item {
+	position: relative;
+	padding: 27px 0 0;
+}
+.spoiler__item::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #CACCD2;
+}
+.spoiler__title {
+	cursor: pointer;
+	position: relative;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 120%;
+	margin-bottom: 30px;
+}
+.spoiler__title::after,
+.spoiler__title::before {
+	content: "";
+	position: absolute;
+	top: 15px;
+	width: 14px;
+	height: 4px;
+	background-color: var(--title-color);
+	border-radius: 5px;
+	transition: all .3s ease 0s;
+}
+.spoiler__title::after {
+	right: 0;
+	transform: rotate(-43deg);
+}
+.spoiler__title::before {
+	right: 7px;
+	transform: rotate(43deg);
+}
+.spoiler__title._active::after {
+  transform: rotate(43deg);
+	background-color: #2389FF;
+}
+.spoiler__title._active::before {
+  transform: rotate(-43deg);
+	background-color: #2389FF;
+}
+.spoiler__text {
+	max-height: 0;
+	overflow: hidden;
+	/* margin-bottom: 10px; */
+	transition: all .3s ease 0s;
+	font-size: 16px;
+	line-height: 150%;
+	color: var(--subtitle-color);
+}
+
+
+
+
+.footer {
+  position: relative;
+  background-color: #F4F7FE;
+}
+.footer__body {
+	padding: 53px 0 26px;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #DEDEDE;
+}
